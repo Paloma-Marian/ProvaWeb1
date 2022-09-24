@@ -1,13 +1,13 @@
 <template>
   <div>
-    <button @click="calcularMedia()">Calcular</button>
+    <button @click="calcularMedia()" >Calcular</button>
     <p>{{media}}</p>
     <table>
         <tr>
             <th>Nome do Aluno</th>
             <th>Informação</th>
         </tr>
-        <tr v-for="t in tabelaMedia" :key="t.aluno" >
+        <tr v-for="t in tabelaMedia" :key="t.aluno">
             <td>{{t.aluno}}</td>
             <td>{{t.infomacao}}</td>
         </tr>
@@ -35,8 +35,6 @@ export default {
             ]
         }
     },
-    mounted() {
-    },
     methods: {
         calcularMedia() {
             this.media = (this.valor1 + this.valor2 * 2 + this.valor3 * 3)/6
@@ -58,5 +56,10 @@ export default {
 </script>
 
 <style>
-
+.aprovado {
+  background-color: blue;
+}
+.reprovado {
+  background-color: red;
+}
 </style>
